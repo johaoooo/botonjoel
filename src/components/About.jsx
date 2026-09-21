@@ -8,10 +8,40 @@ export default function About() {
 
   return (
     <section id="about" className="wrap about">
-      <div className="about-img">
-        <div className="kanvo-pattern-bg"></div>
-        <div className="mk">JB</div>
-        <div className="sub">JOEL BOTON • PORTO-NOVO</div>
+      <div className="about-img" style={{ position: 'relative', overflow: 'hidden' }}>
+        <img 
+          src="/images/joel-hero.jpg" 
+          alt="Joel Boton au métier à tisser"
+          style={{
+            position: 'absolute',
+            inset: 0,
+            width: '100%',
+            height: '100%',
+            objectFit: 'cover',
+            filter: 'contrast(1.05) brightness(0.95)'
+          }}
+          onError={(e) => {
+            e.target.src = "https://res.cloudinary.com/dzxesa3wi/image/upload/v1789957721/WhatsApp_Image_2026-09-20_at_23.42.28_mxj7rm.jpg";
+          }}
+        />
+        <div 
+          style={{
+            position: 'absolute',
+            inset: 0,
+            background: 'linear-gradient(to top, rgba(11, 9, 14, 0.95) 0%, rgba(11, 9, 14, 0.2) 60%)'
+          }}
+        />
+        <div style={{ position: 'absolute', bottom: '24px', left: '24px', right: '24px', zIndex: 2 }}>
+          <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', color: 'var(--violet-2)', textTransform: 'uppercase', marginBottom: '4px' }}>
+            Porto-Novo, Bénin
+          </div>
+          <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '24px', fontWeight: 900 }}>
+            JOEL BOTON
+          </div>
+          <div style={{ fontSize: '13px', color: 'var(--muted)' }}>
+            8 ans d'excellence textile à Kandévié
+          </div>
+        </div>
       </div>
 
       <div>

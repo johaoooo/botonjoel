@@ -46,39 +46,40 @@ export default function Hero() {
 
       <div className="hero-visual">
         <div className="h-card">
-          <div className="kanvo-pattern-bg"></div>
-          
-          {/* Decorative Kanvo Weave SVG Graphic */}
-          <div style={{ position: 'absolute', inset: 0, display: 'flex', alignItems: 'center', justifyContent: 'center', opacity: 0.85 }}>
-            <svg width="220" height="260" viewBox="0 0 200 240" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Vertical warp threads */}
-              {[...Array(12)].map((_, i) => (
-                <line key={`warp-${i}`} x1={20 + i * 14} y1="10" x2={20 + i * 14} y2="230" stroke="rgba(197, 152, 255, 0.25)" strokeWidth="1.5" />
-              ))}
-              {/* Horizontal weft woven bands */}
-              <rect x="25" y="30" width="150" height="24" rx="4" fill="rgba(146, 56, 245, 0.45)" stroke="var(--violet-2)" strokeWidth="1.2" />
-              <rect x="25" y="66" width="150" height="18" rx="3" fill="rgba(38, 25, 52, 0.7)" stroke="rgba(245, 243, 240, 0.2)" strokeWidth="1" />
-              <rect x="25" y="96" width="150" height="34" rx="4" fill="rgba(146, 56, 245, 0.6)" stroke="var(--violet)" strokeWidth="1.5" />
-              {/* Geometrical Kanvo Diamond Motifs */}
-              <polygon points="100,100 115,113 100,126 85,113" fill="#F5F3F0" opacity="0.9" />
-              <polygon points="60,103 70,113 60,123 50,113" fill="var(--violet-2)" opacity="0.8" />
-              <polygon points="140,103 150,113 140,123 130,113" fill="var(--violet-2)" opacity="0.8" />
-              
-              <rect x="25" y="142" width="150" height="18" rx="3" fill="rgba(38, 25, 52, 0.7)" stroke="rgba(245, 243, 240, 0.2)" strokeWidth="1" />
-              <rect x="25" y="172" width="150" height="28" rx="4" fill="rgba(146, 56, 245, 0.4)" stroke="var(--violet-2)" strokeWidth="1.2" />
-            </svg>
-          </div>
+          <img 
+            src="/images/joel-hero.jpg" 
+            alt="Joel Boton — Maître Tisserand de Kanvô"
+            style={{
+              position: 'absolute',
+              inset: 0,
+              width: '100%',
+              height: '100%',
+              objectFit: 'cover',
+              objectPosition: 'center top'
+            }}
+            onError={(e) => {
+              e.target.src = "https://res.cloudinary.com/dzxesa3wi/image/upload/v1789957721/WhatsApp_Image_2026-09-20_at_23.42.28_mxj7rm.jpg";
+            }}
+          />
+          <div 
+            style={{
+              position: 'absolute',
+              inset: 0,
+              background: 'linear-gradient(to top, rgba(11, 9, 14, 0.95) 0%, rgba(11, 9, 14, 0.4) 40%, rgba(146, 56, 245, 0.15) 100%)',
+              pointerEvents: 'none'
+            }}
+          />
 
           <div className="badge-new">
             <div className="badge-pill">
-              Kanvô Royal <span className="badge-tag" style={{ marginLeft: '6px' }}>PIÈCE UNIQUE</span>
+              Atelier Kandévié <span className="badge-tag" style={{ marginLeft: '6px' }}>PORTO-NOVO</span>
             </div>
           </div>
 
           <div className="overline">
-            <div className="tag">Collection 2025 — Atelier Kandévié</div>
-            <h4>Pagne « Dignité d'Améthyste »</h4>
-            <div className="yr">100% Coton peigné béninois • Tissé main</div>
+            <div className="tag">Maître Artisan Textile</div>
+            <h4>Joel Boton au métier à tisser</h4>
+            <div className="yr">Tissage d'exception • 100% Coton peigné béninois</div>
           </div>
           <div className="bar"></div>
         </div>
