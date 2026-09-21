@@ -35,17 +35,18 @@ export default function Header() {
               href={whatsappUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className="btn-solid"
+              className="btn-solid btn-whatsapp-header"
+              title="Discuter directement sur WhatsApp"
             >
-              <MessageCircle size={16} />
-              <span>WhatsApp Direct</span>
+              <MessageCircle size={17} />
+              <span className="btn-whatsapp-text">WhatsApp Direct</span>
             </a>
             <button 
               className="menu-btn" 
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Ouvrir le menu"
             >
-              <Menu size={20} />
+              <Menu size={22} />
             </button>
           </div>
         </nav>
@@ -57,35 +58,45 @@ export default function Header() {
         style={{ 
           opacity: mobileMenuOpen ? 1 : 0, 
           visibility: mobileMenuOpen ? 'visible' : 'hidden',
-          pointerEvents: mobileMenuOpen ? 'all' : 'none'
+          pointerEvents: mobileMenuOpen ? 'all' : 'none',
+          padding: '24px 20px',
+          overflowY: 'auto'
         }}
       >
         <button 
           className="close-btn" 
           onClick={closeMenu}
           aria-label="Fermer le menu"
-          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
-          <X size={28} />
+          <X size={26} />
         </button>
-        <a href="#top" onClick={closeMenu}>Accueil</a>
-        <a href="#work" onClick={closeMenu}>Créations</a>
-        <a href="#formations" onClick={closeMenu}>Formations</a>
-        <a href="#process" onClick={closeMenu}>Savoir-faire</a>
-        <a href="#about" onClick={closeMenu}>À propos</a>
-        <a href="#pricing" onClick={closeMenu}>Tarifs</a>
-        <a href="#faq" onClick={closeMenu}>FAQ</a>
-        <a href="#contact" onClick={closeMenu}>Contact</a>
-        <a 
-          href={whatsappUrl} 
-          target="_blank" 
-          rel="noopener noreferrer" 
-          className="btn-solid"
-          style={{ marginTop: '20px' }}
-        >
-          <MessageCircle size={18} />
-          <span>Contacter sur WhatsApp</span>
-        </a>
+
+        <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '16px', width: '100%', maxWidth: '320px', margin: 'auto 0' }}>
+          <div style={{ marginBottom: '8px' }}>
+            <Logo showText={true} size="large" />
+          </div>
+          <div style={{ width: '40px', height: '2px', background: 'var(--border)', marginBottom: '8px' }}></div>
+
+          <a href="#top" onClick={closeMenu} className="mob-link">Accueil</a>
+          <a href="#work" onClick={closeMenu} className="mob-link">Créations</a>
+          <a href="#formations" onClick={closeMenu} className="mob-link">Formations</a>
+          <a href="#process" onClick={closeMenu} className="mob-link">Savoir-faire</a>
+          <a href="#about" onClick={closeMenu} className="mob-link">À propos</a>
+          <a href="#pricing" onClick={closeMenu} className="mob-link">Tarifs</a>
+          <a href="#faq" onClick={closeMenu} className="mob-link">FAQ</a>
+          <a href="#contact" onClick={closeMenu} className="mob-link">Contact</a>
+          
+          <a 
+            href={whatsappUrl} 
+            target="_blank" 
+            rel="noopener noreferrer" 
+            className="btn-solid"
+            style={{ width: '100%', justifyContent: 'center', marginTop: '16px', padding: '14px 20px', fontSize: '15px' }}
+          >
+            <MessageCircle size={18} />
+            <span>Échanger sur WhatsApp</span>
+          </a>
+        </div>
       </div>
     </>
   );

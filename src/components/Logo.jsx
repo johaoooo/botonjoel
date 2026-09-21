@@ -24,6 +24,7 @@ export default function Logo({ size = 'normal', showText = true, isWhiteText = f
     >
       {/* Artisan Emblem (JB Monogram woven with loom guidelines) */}
       <div 
+        className="logo-emblem"
         style={{ 
           width: `${emblemSize}px`, 
           height: `${emblemSize}px`, 
