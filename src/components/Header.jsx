@@ -25,6 +25,7 @@ export default function Header() {
             <a href="#process">Savoir-faire</a>
             <a href="#about">À propos</a>
             <a href="#pricing">Tarifs</a>
+            <a href="#faq">FAQ</a>
             <a href="#contact">Contact</a>
           </div>
 
@@ -72,6 +73,7 @@ export default function Header() {
         <a href="#process" onClick={closeMenu}>Savoir-faire</a>
         <a href="#about" onClick={closeMenu}>À propos</a>
         <a href="#pricing" onClick={closeMenu}>Tarifs</a>
+        <a href="#faq" onClick={closeMenu}>FAQ</a>
         <a href="#contact" onClick={closeMenu}>Contact</a>
         <a 
           href={whatsappUrl} 

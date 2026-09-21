@@ -11,8 +11,10 @@ import Training from './components/Training';
 import About from './components/About';
 import Testimonials from './components/Testimonials';
 import Pricing from './components/Pricing';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import FloatingWhatsApp from './components/FloatingWhatsApp';
 
 export default function App() {
   return (
@@ -30,9 +32,11 @@ export default function App() {
         <About />
         <Testimonials />
         <Pricing />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </div>
   );
 }
