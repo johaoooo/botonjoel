@@ -248,25 +248,33 @@ nav {
 }
 
 section {
-  padding: 100px 0;
+  padding: 140px 0;
+  position: relative;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 768px) {
   section {
-    padding: 60px 0;
+    padding: 90px 0;
   }
+}
+
+.section-alt {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
 }
 
 .eyebrow {
   color: var(--violet-2);
   font-size: 13px;
-  letter-spacing: 0.06em;
-  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  margin-bottom: 18px;
   display: flex;
   align-items: center;
   gap: 10px;
   font-family: 'Space Mono', monospace;
   text-transform: uppercase;
+  font-weight: 700;
 }
 
 .eyebrow::before {
@@ -276,17 +284,18 @@ section {
 
 /* Hero */
 .hero {
-  padding: 80px 0 50px;
+  padding: 110px 0 90px;
   display: grid;
   grid-template-columns: 1.15fr 0.85fr;
-  gap: 48px;
+  gap: 56px;
   align-items: center;
 }
 
 @media (max-width: 960px) {
   .hero {
     grid-template-columns: 1fr;
-    padding: 40px 0;
+    padding: 60px 0 50px;
+    gap: 40px;
   }
 }
 

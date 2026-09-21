@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { MessageCircle, Menu, X } from 'lucide-react';
 import { artisanData } from '../data/portfolioData';
 
 export default function Header() {
@@ -34,17 +35,15 @@ export default function Header() {
               rel="noopener noreferrer" 
               className="btn-solid"
             >
+              <MessageCircle size={16} />
               <span>WhatsApp Direct</span>
-              <span>💬</span>
             </a>
             <button 
               className="menu-btn" 
               onClick={() => setMobileMenuOpen(true)}
               aria-label="Ouvrir le menu"
             >
-              <svg width="20" height="20" viewBox="0 0 18 18" fill="none">
-                <path d="M1 4H17M1 9H17M1 14H17" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" />
-              </svg>
+              <Menu size={20} />
             </button>
           </div>
         </nav>
@@ -63,8 +62,9 @@ export default function Header() {
           className="close-btn" 
           onClick={closeMenu}
           aria-label="Fermer le menu"
+          style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
         >
-          ×
+          <X size={28} />
         </button>
         <a href="#top" onClick={closeMenu}>Accueil</a>
         <a href="#work" onClick={closeMenu}>Créations</a>
@@ -80,7 +80,8 @@ export default function Header() {
           className="btn-solid"
           style={{ marginTop: '20px' }}
         >
-          Contacter sur WhatsApp 💬
+          <MessageCircle size={18} />
+          <span>Contacter sur WhatsApp</span>
         </a>
       </div>
     </>

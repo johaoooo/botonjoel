@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight, GraduationCap, MessageCircle, Sparkles, MapPin } from 'lucide-react';
 import { artisanData } from '../data/portfolioData';
 
 export default function Hero() {
@@ -27,10 +28,12 @@ export default function Hero() {
         </p>
         <div className="hero-actions">
           <a href="#work" className="btn-solid">
-            Voir mes créations →
+            <span>Voir mes créations</span>
+            <ArrowRight size={16} />
           </a>
           <a href="#formations" className="btn-line">
-            Formations de tissage
+            <GraduationCap size={16} />
+            <span>Formations de tissage</span>
           </a>
           <a 
             href={whatsappUrl} 
@@ -39,7 +42,8 @@ export default function Hero() {
             className="btn-line"
             style={{ borderColor: 'var(--violet)' }}
           >
-            Commander 💬
+            <MessageCircle size={16} color="var(--violet-2)" />
+            <span>Commander</span>
           </a>
         </div>
       </div>
@@ -71,8 +75,10 @@ export default function Hero() {
           />
 
           <div className="badge-new">
-            <div className="badge-pill">
-              Atelier Kandévié <span className="badge-tag" style={{ marginLeft: '6px' }}>PORTO-NOVO</span>
+            <div className="badge-pill" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
+              <MapPin size={12} color="var(--violet-2)" />
+              <span>Atelier Kandévié</span>
+              <span className="badge-tag" style={{ marginLeft: '4px' }}>PORTO-NOVO</span>
             </div>
           </div>
 
@@ -85,7 +91,8 @@ export default function Hero() {
         </div>
 
         <div className="floating-count">
-          🧵 {artisanData.creationsCount} pièces d'exception tissées
+          <Sparkles size={16} color="var(--violet-2)" />
+          <span><b>{artisanData.creationsCount}</b> pièces d'exception tissées</span>
         </div>
       </div>
     </div>
