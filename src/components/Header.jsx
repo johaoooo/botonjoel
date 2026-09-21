@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { MessageCircle, Menu, X } from 'lucide-react';
+import Logo from './Logo';
 import { artisanData } from '../data/portfolioData';
 
 export default function Header() {
@@ -15,8 +16,8 @@ export default function Header() {
     <>
       <header>
         <nav className="wrap">
-          <a href="#top" className="logo">
-            JOEL BOTON
+          <a href="#top" style={{ display: 'inline-flex', alignItems: 'center' }}>
+            <Logo />
           </a>
 
           <div className="nav-links">

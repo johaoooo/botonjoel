@@ -1,5 +1,6 @@
 import React from 'react';
 import { MapPin, MessageCircle, Mail, Phone, Heart } from 'lucide-react';
+import Logo from './Logo';
 import { artisanData } from '../data/portfolioData';
 
 export default function Footer() {
@@ -13,8 +14,8 @@ export default function Footer() {
     <footer className="wrap" style={{ padding: '60px 0 40px', borderTop: '1px solid var(--border)' }}>
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '40px', width: '100%', marginBottom: '40px' }}>
         <div>
-          <div className="logo" style={{ fontSize: '22px', marginBottom: '12px' }}>
-            JOEL BOTON
+          <div style={{ marginBottom: '16px' }}>
+            <Logo size="footer" />
           </div>
           <p style={{ color: 'var(--muted)', fontSize: '14px', lineHeight: 1.6, maxWidth: '320px', margin: '0 0 16px' }}>
             Maître Tisserand de Kanvô à Porto-Novo, Bénin. Préservation et création textile d'exception faites main.
