@@ -1,7 +1,16 @@
 import React from 'react';
 
-export default function Logo({ size = 'normal', isWhiteText = false }) {
-  const isLarge = size === 'footer' || size === 'large';
+export default function Logo({ size = 'normal', showText = true, isWhiteText = false }) {
+  let emblemSize = 42;
+  let svgSize = 25;
+
+  if (size === 'navbar') {
+    emblemSize = 50; // Agrandissement pour la navbar sans texte
+    svgSize = 30;
+  } else if (size === 'footer' || size === 'large') {
+    emblemSize = 46;
+    svgSize = 28;
+  }
 
   return (
     <div 
@@ -16,22 +25,24 @@ export default function Logo({ size = 'normal', isWhiteText = false }) {
       {/* Artisan Emblem (JB Monogram woven with loom guidelines) */}
       <div 
         style={{ 
-          width: isLarge ? '44px' : '38px', 
-          height: isLarge ? '44px' : '38px', 
-          borderRadius: '10px',
+          width: `${emblemSize}px`, 
+          height: `${emblemSize}px`, 
+          borderRadius: '12px',
           background: 'linear-gradient(135deg, #7C22E8 0%, #5811A8 100%)',
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          boxShadow: '0 4px 14px rgba(124, 34, 232, 0.28)',
+          boxShadow: '0 4px 16px rgba(124, 34, 232, 0.32)',
           flexShrink: 0,
           position: 'relative',
           transition: 'transform 0.2s ease'
         }}
+        onMouseEnter={(e) => { e.currentTarget.style.transform = 'scale(1.06)'; }}
+        onMouseLeave={(e) => { e.currentTarget.style.transform = 'scale(1)'; }}
       >
         <svg 
-          width={isLarge ? "26" : "22"} 
-          height={isLarge ? "26" : "22"} 
+          width={svgSize} 
+          height={svgSize} 
           viewBox="0 0 64 64" 
           fill="none" 
           xmlns="http://www.w3.org/2000/svg"
@@ -72,37 +83,39 @@ export default function Logo({ size = 'normal', isWhiteText = false }) {
         </svg>
       </div>
 
-      {/* Brand Typography */}
-      <div style={{ display: 'flex', flexDirection: 'column' }}>
-        <span 
-          style={{ 
-            fontFamily: 'Archivo, sans-serif', 
-            fontWeight: 900, 
-            fontSize: isLarge ? '20px' : '18px', 
-            letterSpacing: '-0.02em', 
-            color: isWhiteText ? '#FFFFFF' : 'var(--text)', 
-            lineHeight: 1.1,
-            display: 'flex',
-            alignItems: 'baseline'
-          }}
-        >
-          <span>JOEL BOTON</span>
-          <span style={{ color: 'var(--violet)', marginLeft: '1px' }}>.</span>
-        </span>
-        <span 
-          style={{ 
-            fontFamily: 'Space Mono, monospace', 
-            fontSize: '9.5px', 
-            letterSpacing: '0.14em', 
-            color: 'var(--violet)', 
-            fontWeight: 700,
-            textTransform: 'uppercase',
-            marginTop: '3px'
-          }}
-        >
-          Kanvô • Porto-Novo
-        </span>
-      </div>
+      {/* Brand Typography (optional) */}
+      {showText && (
+        <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <span 
+            style={{ 
+              fontFamily: 'Archivo, sans-serif', 
+              fontWeight: 900, 
+              fontSize: size === 'footer' ? '20px' : '18px', 
+              letterSpacing: '-0.02em', 
+              color: isWhiteText ? '#FFFFFF' : 'var(--text)', 
+              lineHeight: 1.1,
+              display: 'flex',
+              alignItems: 'baseline'
+            }}
+          >
+            <span>JOEL BOTON</span>
+            <span style={{ color: 'var(--violet)', marginLeft: '1px' }}>.</span>
+          </span>
+          <span 
+            style={{ 
+              fontFamily: 'Space Mono, monospace', 
+              fontSize: '9.5px', 
+              letterSpacing: '0.14em', 
+              color: 'var(--violet)', 
+              fontWeight: 700,
+              textTransform: 'uppercase',
+              marginTop: '3px'
+            }}
+          >
+            Kanvô • Porto-Novo
+          </span>
+        </div>
+      )}
     </div>
   );
 }

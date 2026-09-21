@@ -16,8 +16,8 @@ export default function Header() {
     <>
       <header>
         <nav className="wrap">
-          <a href="#top" style={{ display: 'inline-flex', alignItems: 'center' }}>
-            <Logo />
+          <a href="#top" style={{ display: 'inline-flex', alignItems: 'center' }} title="Accueil — Joel Boton">
+            <Logo showText={false} size="navbar" />
           </a>
 
           <div className="nav-links">
