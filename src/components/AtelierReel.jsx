@@ -67,17 +67,17 @@ export default function AtelierReel() {
             }} />
             
             <div style={{ position: 'absolute', top: '18px', left: '18px' }}>
-              <span className="badge-pill" style={{ background: 'rgba(11,9,14,0.88)', display: 'inline-flex', alignItems: 'center', gap: '6px' }}>
-                <MapPin size={13} color="var(--violet-2)" />
+              <span className="badge-pill" style={{ background: 'rgba(255, 255, 255, 0.95)', color: 'var(--text)', display: 'inline-flex', alignItems: 'center', gap: '6px', border: '1px solid var(--border)' }}>
+                <MapPin size={13} color="var(--violet)" />
                 <span>Kandévié, Porto-Novo</span>
               </span>
             </div>
 
             <div style={{ position: 'absolute', bottom: '20px', left: '22px', right: '22px' }}>
-              <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', color: 'var(--violet-2)', textTransform: 'uppercase', marginBottom: '4px' }}>
+              <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', color: '#D8B4FE', textTransform: 'uppercase', marginBottom: '4px', fontWeight: 700 }}>
                 Immersion Artisanale
               </div>
-              <h4 style={{ margin: 0, fontSize: '21px', color: 'var(--text)', fontWeight: 700 }}>
+              <h4 style={{ margin: 0, fontSize: '21px', color: '#FFFFFF', fontWeight: 700 }}>
                 Le sanctuaire du Kanvô fait main
               </h4>
             </div>

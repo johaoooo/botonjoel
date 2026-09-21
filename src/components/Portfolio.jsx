@@ -3,34 +3,34 @@ import { LayoutGrid, List, MessageCircle, Eye, X, Sparkles, Tag, ArrowRight } fr
 import { filterCategories, portfolioItems, artisanData } from '../data/portfolioData';
 
 // SVG patterns representing different Kanvo weaves
-const KanvoFabricGraphic = ({ color = '#9238F5', accent = '#C598FF', variant = 1 }) => {
+const KanvoFabricGraphic = ({ color = '#7C22E8', accent = '#A855F7', variant = 1 }) => {
   return (
-    <div style={{ position: 'relative', width: '100%', height: '190px', overflow: 'hidden', background: '#120D1A', borderRadius: '12px 12px 0 0' }}>
+    <div style={{ position: 'relative', width: '100%', height: '190px', overflow: 'hidden', background: '#FAF5FF', borderRadius: '14px 14px 0 0', borderBottom: '1px solid var(--border)' }}>
       <svg width="100%" height="100%" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
         <defs>
           <pattern id={`weave-${variant}`} width="40" height="40" patternUnits="userSpaceOnUse">
-            <rect width="40" height="40" fill="#140F1D" />
-            <line x1="10" y1="0" x2="10" y2="40" stroke="rgba(197, 152, 255, 0.15)" strokeWidth="1" />
-            <line x1="20" y1="0" x2="20" y2="40" stroke="rgba(197, 152, 255, 0.15)" strokeWidth="1" />
-            <line x1="30" y1="0" x2="30" y2="40" stroke="rgba(197, 152, 255, 0.15)" strokeWidth="1" />
+            <rect width="40" height="40" fill="#FAF5FF" />
+            <line x1="10" y1="0" x2="10" y2="40" stroke="rgba(124, 34, 232, 0.12)" strokeWidth="1" />
+            <line x1="20" y1="0" x2="20" y2="40" stroke="rgba(124, 34, 232, 0.12)" strokeWidth="1" />
+            <line x1="30" y1="0" x2="30" y2="40" stroke="rgba(124, 34, 232, 0.12)" strokeWidth="1" />
             
             {variant % 3 === 0 && (
               <>
-                <polygon points="20,5 35,20 20,35 5,20" fill={color} fillOpacity="0.45" stroke={accent} strokeWidth="1" />
-                <circle cx="20" cy="20" r="3" fill="#F5F3F0" />
+                <polygon points="20,5 35,20 20,35 5,20" fill={color} fillOpacity="0.25" stroke={accent} strokeWidth="1.2" />
+                <circle cx="20" cy="20" r="3" fill="#7C22E8" />
               </>
             )}
             {variant % 3 === 1 && (
               <>
-                <rect x="5" y="8" width="30" height="6" fill={color} fillOpacity="0.6" rx="2" />
-                <rect x="10" y="24" width="20" height="8" fill={accent} fillOpacity="0.5" rx="2" />
-                <polygon points="5,20 12,20 8,16" fill="#F5F3F0" />
-                <polygon points="35,20 28,20 32,16" fill="#F5F3F0" />
+                <rect x="5" y="8" width="30" height="6" fill={color} fillOpacity="0.35" rx="2" />
+                <rect x="10" y="24" width="20" height="8" fill={accent} fillOpacity="0.25" rx="2" />
+                <polygon points="5,20 12,20 8,16" fill="#7C22E8" />
+                <polygon points="35,20 28,20 32,16" fill="#7C22E8" />
               </>
             )}
             {variant % 3 === 2 && (
               <>
-                <path d="M 0 20 Q 20 0 40 20 Q 20 40 0 20" fill="none" stroke={color} strokeWidth="1.8" />
+                <path d="M 0 20 Q 20 0 40 20 Q 20 40 0 20" fill="none" stroke={color} strokeWidth="2" strokeOpacity="0.4" />
                 <circle cx="20" cy="20" r="4" fill={accent} />
               </>
             )}
@@ -39,9 +39,9 @@ const KanvoFabricGraphic = ({ color = '#9238F5', accent = '#C598FF', variant = 1
 
         <rect width="100%" height="100%" fill={`url(#weave-${variant})`} />
         
-        <radialGradient id={`glow-${variant}`} cx="50%" cy="50%" r="60%">
-          <stop offset="0%" stopColor={color} stopOpacity="0.3" />
-          <stop offset="100%" stopColor="#0B090E" stopOpacity="0.8" />
+        <radialGradient id={`glow-${variant}`} cx="50%" cy="50%" r="65%">
+          <stop offset="0%" stopColor={color} stopOpacity="0.12" />
+          <stop offset="100%" stopColor="#FFFFFF" stopOpacity="0.8" />
         </radialGradient>
         <rect width="100%" height="100%" fill={`url(#glow-${variant})`} />
       </svg>
@@ -258,8 +258,8 @@ export default function Portfolio() {
             position: 'fixed',
             inset: 0,
             zIndex: 80,
-            background: 'rgba(11, 9, 14, 0.88)',
-            backdropFilter: 'blur(10px)',
+            background: 'rgba(24, 18, 36, 0.55)',
+            backdropFilter: 'blur(8px)',
             display: 'flex',
             alignItems: 'center',
             justifyContent: 'center',
@@ -269,14 +269,14 @@ export default function Portfolio() {
         >
           <div 
             style={{
-              background: 'var(--bg-card)',
+              background: '#FFFFFF',
               border: '1px solid var(--violet)',
-              borderRadius: '16px',
+              borderRadius: '18px',
               maxWidth: '540px',
               width: '100%',
               padding: '40px',
               position: 'relative',
-              boxShadow: '0 25px 50px -12px rgba(146, 56, 245, 0.4)'
+              boxShadow: '0 25px 60px -15px rgba(124, 34, 232, 0.25), 0 10px 24px rgba(0,0,0,0.08)'
             }}
             onClick={(e) => e.stopPropagation()}
           >

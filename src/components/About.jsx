@@ -34,14 +34,14 @@ export default function About() {
             }}
           />
           <div style={{ position: 'absolute', bottom: '28px', left: '28px', right: '28px', zIndex: 2 }}>
-            <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', color: 'var(--violet-2)', textTransform: 'uppercase', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px' }}>
+            <div style={{ fontFamily: 'Space Mono, monospace', fontSize: '11px', color: '#D8B4FE', textTransform: 'uppercase', marginBottom: '6px', display: 'flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}>
               <MapPin size={12} />
               <span>Porto-Novo, Bénin</span>
             </div>
-            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '26px', fontWeight: 900, marginBottom: '2px' }}>
+            <div style={{ fontFamily: 'Archivo, sans-serif', fontSize: '26px', fontWeight: 900, marginBottom: '2px', color: '#FFFFFF' }}>
               JOEL BOTON
             </div>
-            <div style={{ fontSize: '13.5px', color: 'var(--muted)' }}>
+            <div style={{ fontSize: '13.5px', color: '#E9D5FF' }}>
               8 ans d'excellence textile à Kandévié
             </div>
           </div>
