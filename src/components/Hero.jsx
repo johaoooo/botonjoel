@@ -51,7 +51,7 @@ export default function Hero() {
       <div className="hero-visual">
         <div className="h-card">
           <img 
-            src="/images/joel-hero.jpg" 
+            src="/images/joel-hero-new.jpg" 
             alt="Joel Boton — Maître Tisserand de Kanvô"
             style={{
               position: 'absolute',
@@ -62,7 +62,7 @@ export default function Hero() {
               objectPosition: 'center top'
             }}
             onError={(e) => {
-              e.target.src = "https://res.cloudinary.com/dzxesa3wi/image/upload/v1789957721/WhatsApp_Image_2026-09-20_at_23.42.28_mxj7rm.jpg";
+              e.target.src = "https://res.cloudinary.com/dzxesa3wi/image/upload/v1789957721/WhatsApp_Image_2026-09-20_at_23.43.42_dgmnci.jpg";
             }}
           />
           <div 

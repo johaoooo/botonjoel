@@ -5,11 +5,11 @@ export default function Logo({ size = 'normal', showText = true, isWhiteText = f
   let svgSize = 25;
 
   if (size === 'navbar') {
-    emblemSize = 50; // Agrandissement pour la navbar sans texte
-    svgSize = 30;
+    emblemSize = 54; // Agrandissement généreux pour la navbar
+    svgSize = 34;
   } else if (size === 'footer' || size === 'large') {
-    emblemSize = 46;
-    svgSize = 28;
+    emblemSize = 48;
+    svgSize = 30;
   }
 
   return (
